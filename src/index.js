@@ -24,6 +24,7 @@ class Board extends React.Component {
   render() {
     return (
       <div>
+      <h1>Tick Tack Toe</h1>
         <div className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}
