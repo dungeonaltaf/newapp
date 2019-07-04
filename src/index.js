@@ -17,10 +17,12 @@ function Square(props) {
 class Board extends React.Component {
   renderSquare(i) {
     return (
+        
       <Square
         value={this.props.squares[i]}
         onClick={() => this.props.onClick(i)}
-      />
+        />
+        
     );
   }
 
@@ -28,16 +30,7 @@ class Board extends React.Component {
     return (
         
       <div>
-      <h1>Tick Tack Toe<Sound  url={soundfile}
-      volume = {100}
-    
-      loop = {true}
-      ignoreMobileRestrictions = {true}
-      playStatus={Sound.status.PLAYING}
-      playFromPosition={300 /* in milliseconds */}
-      onLoading={this.handleSongLoading}
-      onPlaying={this.handleSongPlaying}
-      onFinishedPlaying={this.handleSongFinishedPlaying}/></h1>
+      <h1>Tick Tack Toe</h1>
         <div className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}
