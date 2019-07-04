@@ -46,6 +46,7 @@ class Board extends React.Component {
           {this.renderSquare(7)}
           {this.renderSquare(8)}
         </div>
+        <button className = "reload" type="button" onClick={ refreshPage }> <span>New Game</span> </button>
       </div>
     );
   }
@@ -156,4 +157,7 @@ function calculateWinner(squares) {
     }
   }
   return null;
+}
+function refreshPage(){ 
+    window.location.reload(); 
 }

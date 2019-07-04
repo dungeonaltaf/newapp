@@ -74,6 +74,18 @@ body {
   
 }
 
+.reload{
+    margin-top: 5px;
+    margin-bottom:5px;
+    margin-left:5px;
+    margin-right:15px;
+    float:left;
+    background:#f9423a;
+    color: white;
+    font-family: "Great Vibes", cursive;
+    
+}
+
 h1{
     color: #d54d7b; font-family: "Great Vibes", cursive; font-size: 30px; line-height: 20px; font-weight: normal; margin-bottom: 5px; margin-top: 5px; text-align: center; text-shadow: 0 1px 1px #fff; 
 }
