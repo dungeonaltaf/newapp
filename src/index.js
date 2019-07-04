@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import 'bootstrap/dist/css/bootstrap.css'; 
+/*import 'bootstrap/dist/css/bootstrap.css'; 
 import 'bootstrap/dist/js/bootstrap.bundle.js';
+*/
 import Sound from 'react-sound';
 import soundfile from './song.mp3';
 
@@ -103,9 +104,21 @@ class Game extends React.Component {
         'Go to move #' + move :
         'Go to game start';
       return (
+          <div>
         <li key={move}>
           <button onClick={() => this.jumpTo(move)}>{desc}</button>
         </li>
+       <Sound  url={soundfile}
+      volume = {100}
+    
+      loop = {true}
+      ignoreMobileRestrictions = {true}
+      playStatus={Sound.status.PLAYING}
+      playFromPosition={300 /* in milliseconds */}
+      onLoading={this.handleSongLoading}
+      onPlaying={this.handleSongPlaying}
+      onFinishedPlaying={this.handleSongFinishedPlaying}/>
+        </div>
         
         
       );
