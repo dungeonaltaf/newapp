@@ -29,6 +29,10 @@ class Board extends React.Component {
         
       <div>
       <h1>Tick Tack Toe<Sound  url={soundfile}
+      volume = {100}
+    
+      loop = {true}
+      ignoreMobileRestrictions = {true}
       playStatus={Sound.status.PLAYING}
       playFromPosition={300 /* in milliseconds */}
       onLoading={this.handleSongLoading}
