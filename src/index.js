@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css'; 
 import 'bootstrap/dist/js/bootstrap.bundle.js';
+import Sound from 'react-sound';
+import soundfile from './song.mp3';
 
 function Square(props) {
   return (
@@ -24,8 +26,14 @@ class Board extends React.Component {
 
   render() {
     return (
+        
       <div>
-      <h1>Tick Tack Toe</h1>
+      <h1>Tick Tack Toe<Sound  url={soundfile}
+      playStatus={Sound.status.PLAYING}
+      playFromPosition={300 /* in milliseconds */}
+      onLoading={this.handleSongLoading}
+      onPlaying={this.handleSongPlaying}
+      onFinishedPlaying={this.handleSongFinishedPlaying}/></h1>
         <div className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}
@@ -87,6 +95,7 @@ class Game extends React.Component {
   }
 
   render() {
+      
     const history = this.state.history;
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
@@ -99,6 +108,8 @@ class Game extends React.Component {
         <li key={move}>
           <button onClick={() => this.jumpTo(move)}>{desc}</button>
         </li>
+        
+        
       );
     });
 
