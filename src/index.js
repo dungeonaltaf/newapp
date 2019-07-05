@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css'; 
-/*import 'bootstrap/dist/js/bootstrap.bundle.js';
-*/
+import 'bootstrap/dist/js/bootstrap.bundle.js';
+
 import Sound from 'react-sound';
 import soundfile from './song.mp3';
 
